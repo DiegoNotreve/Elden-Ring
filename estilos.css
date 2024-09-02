@@ -11,8 +11,10 @@
 
 body {
     background-image: url('https://i.playground.ru/p/Uh1xUQJ0aisCUarR2xut8w.png');
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,6 +47,11 @@ h1 {
 
 }
 
+.material-symbols-outlined {
+    padding: 10px 10px;
+    vertical-align: middle;
+}
+
 section {
     display: flex;
     flex-direction: column;
@@ -69,11 +76,14 @@ button {
     border-radius: 15px;
     border: 2px solid black;
     background-color: #ebba60e7;
+    cursor: pointer;
 }
 
 button:hover{
     transform: scale(1.08);
     transition: 0.2s;
+    background-color: #fa9017
+    
 }
 
 footer p{
