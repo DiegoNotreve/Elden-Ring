@@ -11,8 +11,7 @@
 
 body {
     background-image: url('https://i.playground.ru/p/Uh1xUQJ0aisCUarR2xut8w.png');
-    background-size: cover;
-    
+    background-size:cover;
     background-repeat: no-repeat;
     overflow: hidden;
     display: flex;
