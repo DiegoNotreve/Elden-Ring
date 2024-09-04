@@ -117,8 +117,10 @@ button:hover{
 
 .descricao-meta {
     color: #45474B; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
+    margin: 0.5rem 0; /* Margem acima e abaixo */ 
 }
+   
+   
 
 footer p{
     font-weight: 800;
