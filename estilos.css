@@ -124,7 +124,7 @@ button:hover{
 .resultados-pesquisa{
    
     width: 60rem;
-    height: 68vh;
+    height: 46vh;
     overflow-y: auto;/* Adiciona rolagem vertical se necessário */
     
     padding: 1rem;
@@ -147,6 +147,7 @@ button:hover{
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
 
 .item-resultado img{
@@ -173,7 +174,7 @@ button:hover{
     
 } 
 .item-resultado a:hover {
-    text-decoration: underline;
+    text-decoration: underline #ebba60e7;
 }
 
 .descricao-meta {
