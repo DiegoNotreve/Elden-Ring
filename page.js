@@ -6,8 +6,8 @@ function pesquisar() {
     
 
     //Aqui faz com que quando o botão de pesquisar for apertado sem escrever nada no input, ele retorna a frase "nenhum resultado"
-    if (campoPesquisa == ""){
-        section.innerHTML = "<p>nenhum resultado<p/>"
+    if (!campoPesquisa){
+        section.innerHTML = "<p class='retorno'>Nenhum resultado ⚠ <p/>";
         return
     }
 
@@ -31,7 +31,7 @@ function pesquisar() {
             resultados += `
             <div class="item-resultado">
                 <h2>
-                    <a href="#" target="_blank">${dado.item}</a>
+                    <a href=${dado.linksite} target="_blank">${dado.item}</a>
                     <img src=${dado.img} alt="">
                 </h2>
                 <p class="descricao-meta">${dado.descricao}</p>
@@ -39,12 +39,12 @@ function pesquisar() {
             </div>
         `;
         }
-       if(!resultados){
-        resultados = "<p>Esse item não existe na base de dados</p>"
-       } 
-      
+        
     }
-
+    
+    if(!resultados){
+     resultados = "<p class='retorno'>Esse item não existe na base de dados ⚠</p>" ;
+    } 
     // Atribui os resultados gerados à seção HTML
     section.innerHTML = resultados;
 }
