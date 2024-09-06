@@ -55,6 +55,7 @@ body {
 header {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     /* Adicionado para centralizar verticalmente */
     text-align: center;
@@ -62,6 +63,11 @@ header {
     margin-bottom: 3rem;
     width: 50%;
 
+}
+
+header img {
+    width: 50%; /* Ajuste o valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 main {
