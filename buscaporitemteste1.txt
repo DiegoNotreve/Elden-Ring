@@ -1,0 +1,41 @@
+function pesquisar() {
+    // Captura o valor digitado no campo de busca
+    let termoPesquisa = document.getElementById("campo-pesquisa").value.toLowerCase();
+    
+    // Captura a seção onde os resultados serão exibidos
+    let section = document.getElementById("resultados-pesquisa");
+
+    // Limpa os resultados anteriores
+    section.innerHTML = '';
+    
+    // Variável para armazenar os resultados filtrados
+    let resultados = '';
+    
+    // Filtra os dados com base no termo de pesquisa
+    let dadosFiltrados = dados.filter(dado => 
+        dado.item.toLowerCase().includes(termoPesquisa) ||
+        dado.descricao.toLowerCase().includes(termoPesquisa)
+    );
+    
+    // Itera sobre os dados filtrados e gera o HTML correspondente
+    for (let dado of dadosFiltrados) {
+        resultados += `
+            <div class="item-resultado">
+                <h2>
+                    <a href="#" target="_blank">${dado.item}</a>
+                    <img src="${dado.img}" alt="">
+                </h2>
+                <p class="descricao-meta">${dado.descricao}</p>
+                <a href="${dado.link}">Mais informações</a> 
+            </div>
+        `;
+    }
+    
+    // Exibe os resultados na seção
+    section.innerHTML = resultados;
+
+    // Se não houver resultados, exibe uma mensagem
+    if (resultados === '') {
+        section.innerHTML = '<p>Nenhum resultado encontrado.</p>';
+    }
+}
