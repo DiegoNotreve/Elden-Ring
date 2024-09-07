@@ -178,7 +178,7 @@ button:hover {
 .resultados-pesquisa {
 
     width: 60rem;
-    height: 46vh;
+    height: 35vh;
     overflow-y: auto;
     /* Adiciona rolagem vertical se necessário */
     padding: 1rem;

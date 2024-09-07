@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Elden Ring</title>
 </head>
+
 <body>
     <video autoplay muted loop id="background-video">
         <source src="video/Elden Ring - Malenia Boss Cutscene (Intro and Second Form).mp4" type="video/mp4">
         Seu navegador não suporta o elemento de vídeo.
     </video>
 
+    <audio id="background-audio" loop>
+        <source src="video/Elden Ring - Main Theme OST Official Soundtrack Music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script>
+        // Define o volume para 50% (0.5)
+        document.getElementById('background-audio').volume = 0.3;
+    </script>
+
     <header>
         <img src="imagens/elden.avif" alt="">
 
-    <h1><span class="material-symbols-outlined">
-        swords
-        </span>Aqui você vai encontrar alguns itens pra te ajudar na busca do Anel Pristino!<span class="material-symbols-outlined">
-        swords
-        </span> </h1>
-</header>
+        <h1><span class="material-symbols-outlined">
+                swords
+            </span>Aqui você vai encontrar alguns itens pra te ajudar na busca do Anel Pristino!<span
+                class="material-symbols-outlined">
+                swords
+            </span> </h1>
+    </header>
     <main>
+
+
+
         <section>
             <div class="input-caixa">
-            <input type="text"  placeholder="Pesquisar..." id="campo-pesquisa">
-            <i class="bi bi-search"></i>
-        </div>
+                <input type="text" placeholder="Pesquisar..." id="campo-pesquisa">
+                <i class="bi bi-search"></i>
+            </div>
             <button onclick="pesquisar()">Buscar</button>
         </section>
         <section class="resultados-pesquisa" id="resultados-pesquisa">
-            <!-- <div class="item-resultado">
+           <!--  <div class="item-resultado">
                 <h2> <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/03/untitled-design-47-2.jpg" target="_blank">Moonlight</a><img src="https://img.rankedboost.com/wp-content/plugins/elden-ring/assets/weapons/Dark%20Moon%20Greatsword.png" alt=""></h2>
                 <p class="descricao-meta">É uma arma poderosa em Elden Ring que é obtida ao completar a questline de Ranni the Witch. Ela é conhecida por seu alto dano e habilidades únicas.</p>
                 <a href="https://eldenring.wiki.fextralife.com/Moonlight+Greatsword" target="_blank" class="info">Mais informações</a> 
@@ -53,14 +69,99 @@
                 <h2> <a href="https://i.ytimg.com/vi/8afuh7Lxvc4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCerZo8AX-W8pvFYOzN4gUZMaeupw" target="_blank">Chama, conceda-me força</a><img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/flame_grant_me%20strength_incantation_elden_ring_wiki_guide_200px.png" alt=""></h2>
                 <p class="descricao-meta">É um encantamento superior dos Monges do Fogo. Tem a capacidade de criar uma chama interna poderosa que amplifica ataques físicos e associados ao fogo, desencadeando capacidades de combate aprimoradas.</p>
                 <a href="https://eldenring.wiki.fextralife.com/Flame+Grant+me+Strength" target="_blank">Mais informações</a> 
-            </div> -->
+            </div> 
+
+<div class="item-resultado">
+    <h2>
+        <a href="" target="_blank">Cometa Azur</a>
+        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/holy_light_incantation_elden_ring_wiki_guide.png" alt="Luz Sagrada">
+    </h2>
+    <p class="descricao-meta">A tirania de Bayle é um encantamento em Elden Ring. Foi adicionado com o Sombra do DLC Erdtree.  A tirania de Bayle é uma das mais poderosasEncantamentos de Comunhão do Dragão, emitindo um rugido poderoso seguido por uma explosão de onda de calor.</p>
+    <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Elden-Ring-Holy-Light-Spell-Showcase.jpg" target="_blank">Mais informações</a> 
+</div>
+
+<div class="item-resultado">
+    <h2>
+        <a href="https://eldenring.wiki.fextralife.com/Ebony+Blade" target="_blank">Lâmina de Ébano</a>
+        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/ebony_blade_incantation_elden_ring_wiki_guide.png" alt="Lâmina de Ébano">
+    </h2>
+    <p class="descricao-meta">Uma lâmina de energia negra é invocada, perfurando os inimigos à frente. Altamente eficaz contra criaturas etéreas. Requer 22 de Fé.</p>
+    <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Elden-Ring-Ebony-Blade-Showcase.jpg" target="_blank">Mais informações</a> 
+</div>
+
+<div class="item-resultado">
+    <h2>
+        <a href="https://eldenring.wiki.fextralife.com/Flame+of+Lament" target="_blank">Chama da Lamentação</a>
+        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/flame_of_lament_incantation_elden_ring_wiki_guide.png" alt="Chama da Lamentação">
+    </h2>
+    <p class="descricao-meta">Libera uma explosão de fogo devastadora, causando dano massivo em área. Requer 28 de Fé.</p>
+    <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Elden-Ring-Flame-of-Lament-Showcase.jpg" target="_blank">Mais informações</a> 
+</div>
+
+<div class="item-resultado">
+    <h2>
+        <a href="https://eldenring.wiki.fextralife.com/Dragonfire" target="_blank">Fogo de Dragão</a>
+        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/dragonfire_incantation_elden_ring_wiki_guide.png" alt="Fogo de Dragão">
+    </h2>
+    <p class="descricao-meta">Emite um poderoso fluxo de fogo de dragão em direção aos inimigos, causando dano massivo em área. Requer 28 de Fé.</p>
+    <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Elden-Ring-Dragonfire-Showcase.jpg" target="_blank">Mais informações</a> 
+</div>
+
+<div class="item-resultado">
+    <h2>
+        <a href="https://eldenring.wiki.fextralife.com/Lightning+Strike" target="_blank">Golpe de Raio</a>
+        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/lightning_strike_incantation_elden_ring_wiki_guide.png" alt="Golpe de Raio">
+    </h2>
+    <p class="descricao-meta">Convoca raios para atingir os inimigos próximos. Eficaz contra grupos de inimigos. Requer 19 de Fé.</p>
+    <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Elden-Ring-Lightning-Strike-Showcase.jpg" target="_blank">Mais informações</a> 
+</div>
+
+<div class="item-resultado">
+    <h2>
+        <a href="https://eldenring.wiki.fextralife.com/Bestial+Sling" target="_blank">Estilingue Bestial</a>
+        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/bestial_sling_incantation_elden_ring_wiki_guide.png" alt="Estilingue Bestial">
+    </h2>
+    <p class="descricao-meta">Atira uma rajada de pedras afiadas nos inimigos à frente. Ideal para dano rápido e à distância curta. Requer 10 de Fé.</p>
+    <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Elden-Ring-Bestial-Sling-Showcase.jpg" target="_blank">Mais informações</a> 
+</div>
+
+<div class="item-resultado">
+    <h2>
+        <a href="https://eldenring.wiki.fextralife.com/Comet+Azul" target="_blank">Cometa Azul</a>
+        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/comet_azul_incantation_elden_ring_wiki_guide.png" alt="Cometa Azul">
+    </h2>
+    <p class="descricao-meta">Dispara um cometa mágico de alta velocidade que explode ao contato com o inimigo. Requer 30 de Inteligência.</p>
+    <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Elden-Ring-Comet-Azul-Showcase.jpg" target="_blank">Mais informações</a> 
+</div>
+
+<div class="item-resultado">
+    <h2>
+        <a href="https://eldenring.wiki.fextralife.com/Bloodflame+Blade" target="_blank">Lâmina de Chama Sangrenta</a>
+        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/bloodflame_blade_incantation_elden_ring_wiki_guide.png" alt="Lâmina de Chama Sangrenta">
+    </h2>
+    <p class="descricao-meta">Encanta sua arma com chamas sangrentas que causam sangramento adicional nos inimigos. Requer 12 de Fé.</p>
+    <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Elden-Ring-Bloodflame-Blade-Showcase.jpg" target="_blank">Mais informações</a> 
+</div>
+
+<div class="item-resultado">
+    <h2>
+        <a href="https://eldenring.wiki.fextralife.com/Placidusax's+Ruin" target="_blank">Ruína de Placidusax</a>
+        <img src="https://eldenring.wiki.fextralife.com/file/Elden-Ring/placidusaxs_ruin_incantation_elden_ring_wiki_guide.png" alt="Ruína de Placidusax">
+    </h2>
+    <p class="descricao-meta">Libera um sopro devastador de energia dracônica antiga, obliterando tudo em seu caminho. Requer 36 de Fé.</p>
+    <a href="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Elden-Ring-Placidusaxs-Ruin-Showcase.jpg" target="_blank">Mais informações</a> 
+</div> -->
+
+            
+            
+            
         </section>
     </main>
     <footer>
         <p>2024 - Elden Ring</p>
         <p>Termos de serviço | Políticas de Privacidade</p>
     </footer>
-    
+
     <script src="dados.js"></script>
     <script src="page.js"></script>
 </body>
