@@ -55,7 +55,7 @@ let dados = [
       "https://overplay.com.br/wp-content/uploads/2022/03/rios-sangue-elden-ring-overplay.webp",
   },
   {
-    item: "lança relâmpago de Fortissax",
+    item: "Lança relâmpago de Fortissax",
     descricao:
       "Cria duas lanças de relâmpago vermelho e as crava no chão de cima, uma após a outra. No impacto, cada lança explodirá em trilhas de relâmpago cobrindo a área. Requer 46 de fé.",
     img: "https://img.game8.co/3498530/ae705f2f113b00a774cea6632895d84f.png/show",
