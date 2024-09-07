@@ -34,7 +34,7 @@ Este projeto é uma aplicação de busca de itens do jogo Elden Ring. Ao digitar
 📸 Capturas de Tela:
 ![image](https://github.com/user-attachments/assets/40b3a6e4-2acd-4b19-89ff-5dfd615e4380)
 
-👨‍💻 Créditos
+👨‍💻 Créditos:
 Projeto desenvolvido por Everton Diego, como parte da imersão realizada pela Alura.
 
 
