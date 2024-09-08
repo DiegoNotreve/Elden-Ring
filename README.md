@@ -4,17 +4,20 @@
 📜 Descrição
 Este projeto é uma aplicação de busca de itens do jogo Elden Ring. Ao digitar o nome de um item no campo de busca e clicar no botão "Buscar", o usuário pode ver informações detalhadas sobre o item, incluindo nome, descrição, imagem e um link para a wiki do item.
 
-⚙️ Funcionalidades
+⚙️ Funcionalidades:
+
 🔍 Busca dinâmica de itens do jogo Elden Ring
 🖼️ Exibição de imagem, descrição e informações adicionais sobre os itens
 🎵 Vídeo e música de fundo que proporcionam uma experiência imersiva
 
-💻 Tecnologias Utilizadas
+💻 Tecnologias Utilizadas:
+
 🧱 HTML
 🎨 CSS
 ⚙️ JavaScript
 
 🚀 Como Executar o Projeto:
+
   Itens na base de dados:
 - Moonlight
 - Voto dourado
@@ -34,7 +37,7 @@ Este projeto é uma aplicação de busca de itens do jogo Elden Ring. Ao digitar
 📸 Capturas de Tela:
 ![image](https://github.com/user-attachments/assets/40b3a6e4-2acd-4b19-89ff-5dfd615e4380)
 
-👨‍💻 Créditos
+👨‍💻 Créditos:
 Projeto desenvolvido por Everton Diego, como parte da imersão realizada pela Alura.
 
 
