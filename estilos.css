@@ -65,6 +65,7 @@ header {
 header img {
   width: 50%; /* Ajuste o valor conforme necessário */
   height: auto; /* Mantém a proporção da imagem */
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
 main {
@@ -84,6 +85,8 @@ h1 {
   width: 100%;
   /* ocupa topda a div */
   border-radius: 0.6rem;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
 .material-symbols-outlined {
@@ -198,12 +201,14 @@ button:hover {
   font-size: 1.7rem;
   -webkit-text-stroke-width: 1.7px;
   -webkit-text-stroke-color: black;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
   text-decoration: none;
   color: #ebba60e7;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
 .item-resultado a:hover {
@@ -216,6 +221,7 @@ button:hover {
   /* Cor do texto */
   margin: 0.5rem 0;
   /* Margem acima e abaixo */
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
 footer p {
@@ -234,6 +240,20 @@ footer {
   height: 100px;
   margin-bottom: 30px;
   padding: 20px;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -287,11 +307,11 @@ footer {
     font-size: 1.3rem;
   }
 
-  .item-resultado{
+  .item-resultado {
     width: 80%;
   }
 
-footer{
+  footer {
     background-color: #000000a8;
     position: fixed;
     bottom: 0;
@@ -299,7 +319,5 @@ footer{
     margin: 0;
     width: 100%;
     height: auto;
-    
-}
-
+  }
 }
