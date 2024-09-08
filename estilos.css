@@ -245,7 +245,7 @@ footer {
 @keyframes animate {
   from {
     opacity: 0;
-    transform: translate(0, 100px);
+    transform: translate(-100px);
     filter: blur(33px);
   }
 
