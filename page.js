@@ -18,32 +18,31 @@ function pesquisar() {
   }
 
   //Independente do usuário escrever com letra minúscula uo maiúscula, vai funcionar
-  campoPesquisa = campoPesquisa.toLowerCase()
-  .normalize("NFD")
-  .replace(/[\u0300-\u036f]/g, "");
+  campoPesquisa = campoPesquisa
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
 
   // Inicializa uma string vazia para armazenar os resultados
   let resultados = "";
   let item = "";
   let descricao = "";
-  
 
   // Itera sobre cada dado da lista de dados
   for (let dado of dados) {
     item = dado.item
       .toLowerCase()
       .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");/* este comando de normalize ignora acentuação */
+      .replace(
+        /[\u0300-\u036f]/g,
+        ""
+      ); /* este comando de normalize ignora acentuação */
     descricao = dado.descricao
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
 
-    if (
-      item.includes(campoPesquisa) ||
-      descricao.includes(campoPesquisa)
-      
-    ) {
+    if (item.includes(campoPesquisa) || descricao.includes(campoPesquisa)) {
       //cria um novo elemento
       resultados += `
             <div class="item-resultado">
