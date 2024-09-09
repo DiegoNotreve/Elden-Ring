@@ -14,7 +14,9 @@
   cursor: url("imagens/11.png"), auto;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 #background-video {
   position: fixed;
@@ -24,8 +26,6 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  
- 
 }
 
 body {
@@ -35,13 +35,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Centraliza horizontalmente */
   justify-content: center;
-  /* Centraliza verticalmente */
-  /* background: #000; */
 }
-
-
 
 header {
   display: flex;
@@ -66,7 +61,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 h1 {
@@ -157,7 +151,6 @@ button:hover {
   padding: 5px;
   opacity: 0;
   animation: animate 1s ease-in-out 0.3s 1 forwards;
-
 }
 
 .resultados-pesquisa {
@@ -261,41 +254,49 @@ footer {
   }
 }
 
-
-.rodape{
+.rodape {
   position: relative;
   display: flex;
-  height: 8vw;
+  height: 9vw;
   width: 100%;
   overflow: hidden;
   background-color: #fdfdfd11;
-
 }
 
-.img-item{
+.img-item {
   position: absolute;
   height: inherit;
   width: 8vw;
   left: 100%;
   animation: scrollX var(--duration) linear infinite;
-  animation-delay: calc(var(--duration) / var(--totalitems) * (var(--totalitems) - var(--i)));
-
+  animation-delay: calc(
+    var(--duration) / var(--totalitems) * (var(--totalitems) - var(--i))
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes scrollX {
-to {
-  left: -8vw;
+  to {
+    left: -8vw;
+  }
 }
 
-}
-
-.img-item img{
-  height: inherit;
+.img-item img {
+  height: 80%;
   padding: 10px;
-  
 }
 
-body:after {
+.img-item p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ebba60e7;
+  text-align: center;
+  padding: 0 5px;
+}
+
+/* body:after {
 	content: "";
 	min-height: 100vh;
 	width: 100vw;
@@ -304,69 +305,116 @@ body:after {
 	left: 0;
     background: linear-gradient(120deg, rgba(7, 7, 7, 0.418) 10%, rgba(0, 0, 0, 0.059) 50%, rgba(0, 0, 0, 1) 90%);
     z-index: -1;
-}
+} */
 
 @media (max-width: 768px) {
-  body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Centraliza horizontalmente */
-    justify-content: center;
-    /* Centraliza verticalmente */
-  }
-
   header {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    /* Adicionado para centralizar verticalmente */
     text-align: center;
-    margin-bottom: 3rem;
-    padding: 20px;
     width: 100%;
+    padding: 10px;
   }
 
-  .elden {
-    padding: 1rem;
-    margin-top: 3rem;
-    width: 100%;
+  header img {
+    margin: 30px;
+    width: 100%px;
     height: auto;
   }
-
-  h1 {
-    display: flex;
-    font-size: 1.5rem;
-    padding: 1rem;
+  header h1 {
+    font-size: 1rem;
+    padding: 10px;
   }
 
-  section input {
-    width: 25rem;
-
-    padding: 0.8rem;
-  }
-
-  .resultados-pesquisa {
-    width: 40rem;
-
-    height: 40vh;
-  }
-
-  .item-resultado h2 {
-    font-size: 1.3rem;
+  h2 {
+    font-size: 1rem;
   }
 
   .item-resultado {
-    width: 80%;
+    height: 40dvh;
+    width: 40%;
   }
 
-  footer {
-    background-color: #000000a8;
-    bottom: 0;
-    left: 0;
+  .descricao-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin: 0;
+    padding: 0;
+  }
+
+  .rodape {
     width: 100%;
-    height: auto;
+    background-color: #0000008a;
+    height: 40vw;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+   
+  }
+
+  .img-item {
+    height: inherit;
+    width: 12vw; /* Ajuste para garantir espaço adequado */
+    margin-right: 5vw; /* Espaçamento entre as imagens */
+    position: absolute;
+    animation: scrollX var(--duration) linear infinite;
+    animation-delay: calc(
+      var(--duration) / var(--totalitems) * (var(--totalitems) - var(--i))
+    );
+  }
+
+  .img-item img {
+    height: 50%;
+    /* margin-bottom: 5px; */
+   
+  }
+ 
+  .img-item p {
+    display: block;
+    font-size: 0.7rem; /* Ajuste o tamanho do texto conforme necessário */
+    margin-top: 5px;  /* Adiciona um espaço entre a imagem e o texto */
+  }
+
+  .img-item {
+    padding: 0 5px; /* Adiciona espaçamento entre os itens */
+  }
+
+  @keyframes scrollX {
+    to {
+      left: -120vw; /* Ajustar para cobrir a distância necessária */
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 7px 12px;
+    font-size: 0.85rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
   }
 }
